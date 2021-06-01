@@ -12,7 +12,7 @@ const successHandler = response => {
 
 instance.interceptors.response.use(successHandler, errorHandler)
 
-const url = "https://api.recman.no/v2/get/?key=200323034950k1efe349a3709948943fd306abbaf87401580025698&scope=jobPost&fields=name,startDate,endDate,workplace,images,deadline,logo,title,web"
+const url = "https://api.recman.no/v2/get/?key=200323034950k1efe349a3709948943fd306abbaf87401580025698&scope=jobPost&fields=name,startDate,endDate,workplace,images,deadline,logo,title,web,companyName"
 
 export default async (req, res) => {
   const result = await instance.get(url)
